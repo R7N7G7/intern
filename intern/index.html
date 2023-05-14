@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated background</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+        </li><a href=""><h1>Welcome!!</h1></a></li>
+        </ul>
+    </nav>
+    <div class="bg">
+        <div
+         class="container">
+         <div class= "select animated fadeInDown delay-4s">
+            <h1 id="head">Mass Mail Dispatcher</h1>
+            <input type="file" id="upload" accept="text/csv">
+         </div>
+         <div class="mailInfo">
+            <form onsubnit="sendEmail() ; reset() ; return false;">
+            <h2 id="box-heading">Write your mail here</h2>
+            <p><input type="email" id="from" placeholder="From(Email ID)" required></p>
+            <p><input type="text" id="subject" placeholder="Subject" required></p>
+            <p><textarea id="msg" rows="12" cols="12" placeholder="Body" required></textarea>></p>
+            <p><button type="submit" id="submit">Send</button></p>
+            </form>
+         </div>
+        </div>
+        <hr>
+        <div class="tables">
+            <div class="valTab">
+                <table id="val">
+                    <tr>
+                        <td>
+                            <h2>Valid Emails: <span id="valCount"></span></h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="invalTab">
+                <table id="inval">
+                    <tr>
+                        <td>
+                            <h2>Invalid Emails: <span id="invalCount"></span></h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>var wow = new WOW(
+        {
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset:0,
+            mobile:true,
+            live:true,
+            callback:function(box){
+            },
+            scrollContainer: null,
+            resetAnimation:true,
+        }
+    );
+    wow.init();
+    </script>
+    </div>
+    <hr>
+
+    
+
+</body>
+</html>
